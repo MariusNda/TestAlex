@@ -1,0 +1,30 @@
+# Open banking — obligations des prestataires tiers
+
+> Domaine 8 du referentiel DSP3/PSR. 22 exigences, DSP3-EX-193 a DSP3-EX-214.
+> Retour a l'index : [_index.md](_index.md)
+
+
+| ID | Exigence | Source | Débiteur | Délai / seuil | Paramètre ouvert | Statut |
+|----|----------|--------|----------|---------------|------------------|--------|
+| DSP3-EX-193 | L'AISP qui entend accéder aux données hors demande active de l'utilisateur doit s'assurer que celui-ci est dûment informé de cette intention avant d'utiliser cette fonctionnalité. | [SRC: PSR ST-8221 §Art. 41(2a)] | AISP | Avant usage | Information possible via le contrat-cadre (considérant 65a) | déclinée |
+| DSP3-EX-194 | Les AISP et les PISP doivent accéder aux données de comptes de paiement exclusivement via l'interface dédiée de l'Art. 35, sauf dans les circonstances couvertes par l'Art. 39 ou exceptionnellement via une autre interface sûre et efficace. | [SRC: PSR ST-8221 §Art. 45(1)] | AISP / PISP | — | Double exception : Art. 39 ; clause « exceptionally via another safe and efficient interface » non définie et non encadrée par RTS | déclinée |
+| DSP3-EX-195 | Lorsque seule l'interface de l'Art. 39 est accessible, l'AISP ou le PISP doit en permanence s'identifier auprès de l'ASPSP, fournir les informations de l'Art. 43(2)(a)(ii) à (v), s'appuyer sur les procédures d'authentification fournies par l'ASPSP, ne pas traiter de données à d'autres fins que le service demandé, et journaliser les données accédées. | [SRC: PSR ST-8221 §Art. 45(2)] | AISP / PISP | Logs supprimés 3 ans après création | Conservation prolongée possible si requise pour des procédures de contrôle déjà en cours | déclinée |
+| DSP3-EX-196 | L'AISP ou le PISP doit fournir les fichiers journaux à l'autorité compétente sur demande. | [SRC: PSR ST-8221 §Art. 45(2)(d)] | AISP / PISP | Sans retard indu | — | déclinée |
+| DSP3-EX-197 | Le PISP doit fournir à l'ASPSP la même information que celle demandée à l'utilisateur lors d'une initiation directe. | [SRC: PSR ST-8221 §Art. 46(1)(a)] | PISP | — | — | déclinée |
+| DSP3-EX-198 | Le PISP ne doit fournir ses services que sur la base du consentement de l'utilisateur, conformément à l'Art. 49. | [SRC: PSR ST-8221 §Art. 46(1)(b)] | PISP | — | — | déclinée |
+| DSP3-EX-199 | Le PISP ne doit à aucun moment détenir les fonds du payeur en lien avec la fourniture du service d'initiation. | [SRC: PSR ST-8221 §Art. 46(1)(c)] | PISP | « at any time » | — | déclinée |
+| DSP3-EX-200 | Le PISP doit garantir que les données de sécurité personnalisées de l'utilisateur ne sont accessibles à aucune autre partie que le payeur et l'émetteur de ces données, et qu'elles sont transmises par des canaux sûrs et efficaces. | [SRC: PSR ST-8221 §Art. 46(1)(d)] | PISP | — | — | déclinée |
+| DSP3-EX-201 | Le PISP doit garantir que toute autre information sur l'utilisateur obtenue lors de la fourniture du service n'est communiquée qu'au bénéficiaire et uniquement avec le consentement de l'utilisateur. | [SRC: PSR ST-8221 §Art. 46(1)(e)] | PISP | — | — | déclinée |
+| DSP3-EX-202 | À chaque initiation de paiement, le PISP doit s'identifier auprès de l'ASPSP et communiquer de manière sécurisée avec l'ASPSP, le payeur et le bénéficiaire. | [SRC: PSR ST-8221 §Art. 46(1)(f)] | PISP | À chaque initiation | — | déclinée |
+| DSP3-EX-203 | Le PISP doit être en mesure de refuser d'initier une opération de paiement pour des raisons objectivement justifiées. | [SRC: PSR ST-8221 §Art. 46(1)(fa)] | PISP | — | — | déclinée |
+| DSP3-EX-204 | Le PISP ne doit pas stocker les données de paiement sensibles de l'utilisateur. | [SRC: PSR ST-8221 §Art. 46(2)(a)] | PISP | — | Sans préjudice de l'Art. 45(2)(d) (journaux) | déclinée |
+| DSP3-EX-205 | Le PISP ne doit pas demander à l'utilisateur d'autres données que celles nécessaires à la fourniture du service d'initiation. | [SRC: PSR ST-8221 §Art. 46(2)(b)] | PISP | — | — | déclinée |
+| DSP3-EX-206 | Le PISP ne doit traiter aucune donnée personnelle ou non personnelle (usage, accès, stockage) à d'autres fins que la fourniture du service d'initiation telle que permise par l'utilisateur. | [SRC: PSR ST-8221 §Art. 46(2)(c)] | PISP | — | — | déclinée |
+| DSP3-EX-207 | Le PISP ne doit pas modifier le montant, le bénéficiaire ni aucune autre caractéristique de l'opération. | [SRC: PSR ST-8221 §Art. 46(2)(d)] | PISP | — | — | déclinée |
+| DSP3-EX-208 | L'AISP ne doit fournir ses services que sur la base du consentement de l'utilisateur, conformément à l'Art. 49. | [SRC: PSR ST-8221 §Art. 47(1)(a)] | AISP | — | — | déclinée |
+| DSP3-EX-209 | L'AISP doit garantir que les données de sécurité personnalisées ne sont accessibles à aucune autre partie que l'utilisateur et l'émetteur de ces données, et que leur transmission se fait par des canaux sûrs et efficaces. | [SRC: PSR ST-8221 §Art. 47(1)(b)] | AISP | — | — | déclinée |
+| DSP3-EX-210 | Pour chaque session de communication, l'AISP doit s'identifier auprès de l'ASPSP de l'utilisateur et communiquer de manière sécurisée avec l'ASPSP et l'utilisateur. | [SRC: PSR ST-8221 §Art. 47(1)(c)] | AISP | À chaque session | — | déclinée |
+| DSP3-EX-211 | L'AISP ne doit accéder qu'à l'information des comptes de paiement désignés et des opérations associées. | [SRC: PSR ST-8221 §Art. 47(1)(d)] | AISP | — | — | déclinée |
+| DSP3-EX-212 | L'AISP doit mettre en place des mécanismes adaptés et efficaces empêchant l'accès à toute information autre que celle des comptes désignés et opérations associées, conformément au consentement de l'utilisateur. | [SRC: PSR ST-8221 §Art. 47(1)(e)] | AISP | — | — | déclinée |
+| DSP3-EX-213 | L'AISP ne doit pas accéder aux données de paiement sensibles liées aux comptes de paiement. | [SRC: PSR ST-8221 §Art. 47(2)(a)] | AISP | — | Cf. Art. 36(5a) : le nom du titulaire et l'identifiant unique du compte n'en font pas partie | déclinée |
+| DSP3-EX-214 | L'AISP ne doit traiter aucune donnée à d'autres fins que la réalisation du service d'information sur les comptes permis par l'utilisateur. | [SRC: PSR ST-8221 §Art. 47(2)(b)] | AISP | — | — | déclinée |

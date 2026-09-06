@@ -1,0 +1,13 @@
+# Registre d'hypothèses — Euro numérique wholesale
+
+> Règle : jamais de suppression. Changement de statut = mise à jour de l'entrée + entrée journal.md
+> + alerte sur les dépendances.
+
+| ID | Hypothèse | Statut | Source | Dépendances |
+|----|-----------|--------|--------|-------------|
+| ENW-H01 | **Dépendance aux plateformes tierces.** Ne pas investir dans une connexion directe à PONTES enfermerait durablement le Groupe dans une dépendance à Euroclear et aux autres orchestrateurs, et interdirait l'accès aux plateformes qui n'ont pas fait le choix de la monnaie de banque centrale. Position exprimée par CACIB, non instruite au niveau Groupe. | 🟡 OUVERTE | [SRC: ENW-S02] | Arbitrage d'une position Groupe ; périmètre d'investissement CACIB et CACEIS ; F4.1 |
+| ENW-H02 | **Profondeur réelle des impacts SI.** Les impacts sont présentés comme légers (API sécurisées par certificats, exigences de disponibilité à préciser), la bascule portant surtout sur les processus. En creusant, la profondeur réelle dépasserait l'interface et toucherait des composants de la chaîne titres. À confirmer par une première vue d'impact. | 🟡 OUVERTE | [SRC: ENW-S02 ; déduction de séance] | Décision d'engager ou non un cadrage de niveau 1 ; estimation de charge |
+| ENW-H03 | **Position de plateforme Groupe.** Tenir un registre de titres paraît peu compatible avec le modèle CACIB, acteur de marché ; l'ambition serait plus plausible côté CACEIS ou d'un gros émetteur comme Amundi. Aucune entité désignée, aucune décision. | 🟡 OUVERTE | [SRC: ENW-S02] | ENW-H04 ; gouvernance Groupe ; F4.2 |
+| ENW-H04 | **Régime pilote comme véhicule.** Les dérogations à CSDR permettraient à une entité non CSD du Groupe d'expérimenter conservation et règlement livraison sur DLT, et de cumuler avec une plateforme de négociation. Cadre non instruit, références d'articles non vérifiées. | 🟡 OUVERTE | [SRC: ENW-S02] | ENW-H03 ; F4.3 |
+| ENW-H05 | **Bascule de l'optionnel vers l'obligatoire.** Un service aujourd'hui optionnel pourrait devenir de fait incontournable, par effet de marché ou par évolution réglementaire. C'est le déclencheur qui ferait passer le dossier au niveau 1. | 🟡 OUVERTE | [SRC: ENW-S02] | Niveau de traitement (_LISEZMOI.md) ; C1.1 |
+| ENW-H06 | **Mutualisation Groupe.** Une mutualisation du reporting et de la collecte de liquidité transverse aux modules reste ouverte, CAPS pouvant être impliqué au titre de la connectivité BCE. CACIB estime l'infrastructure de connexion assez légère pour que la mutualisation ne soit pas évidente. Aucune décision. | 🟡 OUVERTE | [SRC: ENW-S02] | Valeur ajoutée du GT sur ce texte ; ENW-H02 |

@@ -1,0 +1,14 @@
+# Vérification du bénéficiaire (VoP)
+
+> Domaine 10 du referentiel DSP3/PSR. 6 exigences, DSP3-EX-248 a DSP3-EX-253.
+> Retour a l'index : [_index.md](_index.md)
+
+
+| ID | Exigence | Source | Débiteur | Délai / seuil | Paramètre ouvert | Statut |
+|----|----------|--------|----------|---------------|------------------|--------|
+| DSP3-EX-248 | Le PSP doit se conformer aux art. 5c(1) à (7) et 5b(2) du règlement (UE) 260/2012, appliqués mutatis mutandis à tous les virements, y compris ceux hors champ du 260/2012. | [SRC: PSR ST-8221 §Art. 50] | PSP du payeur et PSP du bénéficiaire | Application différée à +27 mois | Renvoi normatif intégral au règl. 260/2012 (tel qu'amendé par 2024/886 et par l'Art. 110c du PSR) ; le mécanisme opérationnel n'est pas reproduit dans le PSR | déclinée |
+| DSP3-EX-249 | Le PSP doit, lorsque le compte du bénéficiaire n'est pas identifié par l'identifiant de compte du point (1)(a) de l'annexe du 260/2012 (IBAN), lire les renvois de l'art. 5c comme visant l'identifiant unique utilisé pour identifier sans ambiguïté ce compte. | [SRC: PSR ST-8221 §Art. 50] | PSP du payeur et PSP du bénéficiaire | +27 mois | — | déclinée |
+| DSP3-EX-250 | Le règlement (UE) 260/2012 est modifié par l'insertion de la définition de l'« IBAN virtuel » (art. 2 point 15a) et d'un art. 2a disposant qu'un IBAN virtuel est un identifiant de compte de paiement valide là où un IBAN est requis. | [SRC: PSR ST-8221 §Art. 110c(1)-(2)] | Colégislateur | — | — | déclinée |
+| DSP3-EX-251 | Les PSP doivent garantir que l'exécution du service de vérification du bénéficiaire et du service du §2 n'empêche pas les payeurs d'autoriser le virement concerné, sans préjudice du 3e alinéa du §6. | [SRC: PSR ST-8221 §Art. 110c(3)(a)] | PSP | — | — | déclinée |
+| DSP3-EX-252 | Les PSP doivent fournir aux utilisateurs non consommateurs le moyen de refuser le service de vérification (opt-out) pour les ordres soumis via des canaux d'initiation reposant sur des processus ou protocoles automatisés dédiés réservés aux non-consommateurs, et leur garantir un droit de réactivation (opt-in) à tout moment. | [SRC: PSR ST-8221 §Art. 110c(3)(b)] | PSP | — | Qualification des « canaux automatisés dédiés » laissée ouverte | déclinée |
+| DSP3-EX-253 | Les PSP doivent offrir aux utilisateurs non consommateurs la possibilité de convenir dans le contrat-cadre que la vérification intervienne après l'autorisation des ordres, y compris pour les ordres soumis en lot, et que le PSP du payeur exécute ces ordres sans intervention supplémentaire dans trois cas seulement : (i) concordance, (ii) concordance approchante, (iii) impossibilité technique de fournir le service ; sans préjudice de l'obligation d'indiquer le nom associé à l'identifiant en cas de concordance approchante. Dans ce cadre, le PSP du payeur n'est pas réputé responsable au titre du §8. | [SRC: PSR ST-8221 §Art. 110c(3)(b)] | PSP | 3 cas (i) à (iii) | Option contractuelle | déclinée |
