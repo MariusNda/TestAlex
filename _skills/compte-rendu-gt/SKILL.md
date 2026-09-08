@@ -34,7 +34,7 @@ Structure, dans cet ordre et sans rien y ajouter :
 5. **Actions et prochaines étapes** : liste libre, `- <Porteur> : <action>. Échéance : JJ/MM ou N/A`.
 
 ## Règles de rédaction
-- Appliquer redaction-gt : pas de tiret long, pas de « il faut », pas de « nous » ni de « je ».
+- Lire `_skills/redaction-gt/SKILL.md` (fichier, pas skill invocable) : pas de tiret long, pas de « il faut », pas de « nous » ni de « je ».
 - **Pas de tableau**, sauf demande explicite de l'utilisateur.
 - **Pas d'emoji** dans le corps du CR.
 - Pas de chiffre qui n'est pas un sujet primaire de discussion.

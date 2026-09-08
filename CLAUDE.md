@@ -35,6 +35,9 @@ les deux sujets n'ont en commun que le nom, ne pas fusionner leurs chaînes de t
 ```
 vault-casa/
 ├── CLAUDE.md                        ← ce fichier (règles)
+├── _ROUTAGE.md                      ← quel fichier lire pour quel type de demande,
+│                                     lu avant toute recherche ; porte aussi le contrat de sub-agent
+├── CHANGE.md                        ← incohérences relevées dans le vault, à valider (lecture humaine)
 ├── annuaire.md                      ← personnes & entités du Groupe (transverse) :
 │                                      consulté avant tout CR ou email, enrichi après chaque réunion
 ├── _transverse/                     ← registres transverses à toutes les réglementations
@@ -76,6 +79,12 @@ ou `[SRC: atelier <nom> du <date>]` ou `[SRC: REG-EX-NNN]` (référence interne 
 - Affirmation sans source → demander la source ou marquer `[SRC: à sourcer ⚠️]` et lister en fin de session.
 - Ne JAMAIS inventer une référence d'article. Localiser via PageIndex avant de citer (commande /loi).
 - Distinguer systématiquement : FAIT (sourcé) / HYPOTHÈSE (trackée) / OPINION (attribuée : « le GT estime », « [entité] considère »).
+- **Reformuler n'est pas interpréter.** Toute conséquence tirée d'un article (« donc il faudra… »,
+  « cela implique… », « l'impact est… ») n'est pas une affirmation sourçable : c'est une HYPOTHÈSE,
+  à créer dans `hypotheses.md` avec son statut, ou une OPINION à attribuer nommément.
+  Jamais une phrase du corps d'un livrable.
+- Le manque d'information se remonte, il ne se comble pas : `[SRC: à sourcer ⚠️]`, jamais
+  une reformulation de mémoire ni une connaissance générale du modèle.
 
 ## RÈGLE N°2 — CYCLE DE VIE DES HYPOTHÈSES
 
@@ -96,6 +105,19 @@ ou d'une guidance ENISA :
 Toute rédaction destinée à un livrable (slide, CR, note, email GT) applique le skill
 `_skills/redaction-gt/SKILL.md`. Toujours le lire avant de rédiger. Jamais d'exception.
 
+⚠️ `_skills/` est un dossier de **documents de méthode**, pas de skills invocables.
+`Skill(redaction-gt)` échoue. Seul `.claude/skills/` porte des commandes invocables.
+
+## RÈGLE N°5 — RELECTURE
+
+Une relecture rouvre le **fichier source**. Corriger ou vérifier une sortie en repartant
+de la sortie précédente est interdit : c'est ainsi que la revue V2 a écrit « DSP3-H17
+n'existe pas » alors que H17 vivait dans `exigences/99-annexes.md`, jamais ouvert.
+Relire deux fois, oui. Relire sa propre copie, non.
+
+Un document dont l'en-tête porte une réserve (« intuitions », « à sourcer », « non
+stabilisé ») ne peut pas être cité en `[SRC:]`. Lire l'en-tête avant de citer.
+
 ## Diagrammes
 
 - Source de vérité : **Mermaid dans le markdown** (versionnable, diffable), dans cartographie/.
@@ -105,7 +127,11 @@ Toute rédaction destinée à un livrable (slide, CR, note, email GT) applique l
 
 ## Surfaces d'usage
 
-- **Claude Code et Cowork** : les deux surfaces peuvent écrire dans le vault (exigences, hypothèses, conclusions, journal, carto). Le choix de la surface est libre, selon le confort du moment.
+- **Claude Code porte le harnais. Cowork porte les outils sans le harnais.** Sur Cowork,
+  ce fichier n'est pas chargé automatiquement : les 7 commandes apparaissent et tournent,
+  mais sans provenance obligatoire, sans routage de lecture, sans Règle n°5. `.claude/agents/`
+  n'y est pas repris non plus. Pour tout travail engageant la chaîne, utiliser Claude Code.
+  Sur Cowork, ouvrir `CLAUDE.md` et `_ROUTAGE.md` à la main avant de commencer.
 - **Sur les deux surfaces** : toute écriture passe par un diff présenté et validé par l'utilisateur avant application. Aucune exception.
 
 ## Commandes (skills dans .claude/skills/)
@@ -115,10 +141,15 @@ Toute rédaction destinée à un livrable (slide, CR, note, email GT) applique l
 - `/reunion [nom]` : enregistrement AI meeting notes Notion → CR (page Notion) + vault + actions dans la base Notion « Actions GT » (attribut Réglementation renseigné = réglementation active)
 - `/brief` : actions ouvertes de la réglementation active (base Notion « Actions GT », filtrée sur Réglementation) + état du vault → ordre de bataille (lecture seule)
 - `/mail [CR]` : transformer un CR en email prêt à envoyer (template validé, registre selon annuaire.md, draft seul)
+- `/synthese [reg] [cible]` : couche de synthèse réduite à partir d'une sortie existante du vault.
+  Réglementation active par défaut, ou celle passée en argument.
+  Liste les cibles synthétisables et demande avant de lire. Sans interprétation, tout sourcé.
 - `/veille [reg]` : veille réglementaire (calendrier, nouvelle version, actes délégués/RTS/ITS, guidances) sur la réglementation active (ou celle passée en argument) ; delta vs baseline du vault, Règle n°3, diff à valider. Routine hebdo : tâche planifiée « veille-hebdo » (lundi matin)
 - `/debrief [texte]` : vidage de contexte (dicté ou tapé) → routage classé/sourcé dans le vault (exigences, hypothèses, faits, journal, actions GT), diff à valider
 
 ## Routines
+
+**Avant toute recherche de fichier** : lire `_ROUTAGE.md` (racine). Il donne, par type de demande, les fichiers à lire et ceux à ne pas ouvrir, et il liste explicitement les cas où aucun routage ne s'applique. Sans correspondance, ne pas forcer un routage approchant : le dire, puis naviguer depuis le `_LISEZMOI.md` de la réglementation active.
 
 **Début de session** : lire CLAUDE.md + exigences.md, hypotheses.md, conclusions.md de la réglementation active.
 **Avant tout CR ou email** : consulter annuaire.md (noms, entités, registre tu/vous) ; proposer son

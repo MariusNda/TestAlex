@@ -13,7 +13,8 @@ Réunion à traiter : $ARGUMENTS (si vide : le plus récent enregistrement non t
    (GT plénier / atelier), les participants et leurs entités. Une question groupée, pas un
    interrogatoire.
 2. Applique le skill _skills/compte-rendu-gt/SKILL.md (fidélité aux positions, élicitation si besoin).
-3. Rédige le CR (style redaction-gt).
+3. Rédige le CR en appliquant `_skills/redaction-gt/SKILL.md` (**lire le fichier** ;
+   ce n'est pas un skill invocable).
 4. PRÉSENTE le CR + le diff vault + la liste des actions extraites (porteur, échéance) AVANT toute écriture.
 5. Après validation :
    - Page Notion CR : sous-page de la page de la réglementation active, sous « 🖊️ Comptes rendus ».

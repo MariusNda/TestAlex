@@ -64,4 +64,5 @@ Sorties : ADAPTER L'EXISTANT / BUILD INTERNE / BUILD EXTERNALISÉ / BUY.
 - Justification propre à chaque niveau de mutualisation, jamais de logique tout-ou-rien.
 - Le gain de mutualisation ne couvre qu'une partie de l'effort : l'adaptation locale demeure et
   se chiffre pour elle-même.
-- Rédaction : appliquer systématiquement le skill redaction-gt.
+- Rédaction : **lire le fichier** `_skills/redaction-gt/SKILL.md` avant de rédiger.
+  Ce n'est pas un skill invocable : `Skill(redaction-gt)` échoue.
