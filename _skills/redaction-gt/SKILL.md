@@ -5,6 +5,13 @@ description: Règles de rédaction de tous les livrables du GT Architectures Ré
 
 # Skill : Rédaction GT
 
+## Langue de travail
+
+**Français, sans exception** — livrables, réponses en séance, et jusqu'aux commentaires
+intermédiaires pendant un raisonnement. Le vault est en français, ses interlocuteurs aussi.
+Les termes réglementaires anglais consacrés se gardent tels quels (*verification of payee*,
+*open banking*, *spoofing*, *dynamic linking*), en italique, sans traduction forcée.
+
 ## Interdits absolus
 - **Jamais de tiret long** (— ou –). Remplacer par une virgule, deux points, ou couper la phrase.
 - **Jamais de « il faut »**. Reformuler : « X est à engager », « X suppose Y », « la priorité est de », ou impératif de recommandation (« Lancer dès septembre… »).

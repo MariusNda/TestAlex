@@ -101,21 +101,15 @@ sans aucune donnée. Un agent les ouvre, n'y trouve rien, et recommence ailleurs
 Caduc : le fichier a été supprimé le 2026-09-07. Voir C.1.
 ---
 
-### 🟠 A.8 — `_LISEZMOI.md` ne figure pas dans l'arborescence de `CLAUDE.md`
+### ✅ A.8 — `_LISEZMOI.md` ne figurait pas dans l'arborescence
 
-C'est le fichier d'entrée de chaque réglementation : il porte l'état exact du dossier, ce qui est
-peuplé et ce qui ne l'est pas. `/brief` s'en sert, `_ROUTAGE.md` §2 et §3 y renvoient comme point
-de départ de toute navigation libre.
+C'est le fichier d'entrée de chaque réglementation : il porte l'état du dossier et son niveau de
+traitement. `/brief` s'en sert, et c'est le point de départ de toute navigation libre. Il était
+absent de l'arborescence de `CLAUDE.md`.
 
-Or l'arborescence de `CLAUDE.md` (lignes 35 à 62) liste `sources.md`, `exigences.md`, `faits.md`,
-`hypotheses.md`, `conclusions.md`, `arbres.md`, `cartographie/`, `contributions-entites/` et
-`journal.md` — **mais pas `_LISEZMOI.md`.**
-
-Le fichier le plus utile du dossier est absent de la carte du dossier.
-
-**Action proposée :** l'ajouter à l'arborescence, en tête de la liste, avec sa vocation
-(« état du dossier, à lire en premier »). Une ligne. À traiter avec B.3, qui porte sur la même
-absence dans la routine de début de session.
+**Tranché le 2026-09-08.** L'arborescence est descendue dans `_methodes/anatomie-vault.md`, où
+`_LISEZMOI.md` figure désormais en tête de la liste des fichiers d'une réglementation. Reste B.3,
+qui porte sur la même absence dans la routine de début de session, et qui t'appartient.
 
 ---
 
@@ -142,6 +136,38 @@ Sa forme diffère parce que son cycle est clos. Mais alors le harnais doit le di
 (`decisions.md` + `restitution-finale.md` remplacent les maillons de travail), ou ajouter un
 `_LISEZMOI.md` d'une dizaine de lignes à `euro-numerique` qui l'annonce comme close et renvoie
 vers sa restitution. La seconde est plus simple et suffit à réparer la consigne du §2.
+
+---
+
+### 🟠 A.10 — AMLR est déclaré niveau 2, mais son dossier est vide
+
+`CLAUDE.md` déclare **AMLR → niveau 2**. Le niveau 2 est défini dans le même fichier comme
+« cartographie détaillée, mutualisation, make-or-buy, aide au chiffrage, trajectoire
+d'architecture », pour 40 à 60 j.h.
+
+Or le dossier `reglementations/amlr/` ne contient que des gabarits :
+
+| Fichier | Taille |
+|---|---|
+| `faits.md` | 331 o |
+| `hypotheses.md` | 796 o |
+| `conclusions.md` | 602 o |
+| `exigences.md` | 1 076 o |
+| `sources.md` | 1 321 o (une seule ligne réelle : le PDF du règlement) |
+
+Aucun dossier `exigences/`, aucune matrice d'impacts, aucune contribution d'entité.
+
+**C'est une déclaration de statut que seul toi peux corriger.** Deux lectures possibles : soit le
+niveau annoncé est une intention et le dossier n'a pas démarré (alors il faut écrire niveau 0 ou 1),
+soit le travail existe ailleurs que dans le vault (alors il faut l'y verser). NIS2 est dans le même
+cas, déclaré « à définir » avec un dossier de gabarits — ce qui est au moins cohérent.
+
+**Conséquence pratique.** Une demande sur AMLR déclenchera la Règle n°6 (sélection des sources),
+qui listera deux lignes et s'arrêtera. C'est le comportement correct, mais l'écart entre le niveau
+affiché et le contenu réel se verra à ce moment-là.
+
+**Action proposée :** aligner le niveau déclaré d'AMLR et de NIS2 sur le contenu réel du dossier,
+dans `CLAUDE.md` et dans leur `_LISEZMOI.md`.
 
 ---
 

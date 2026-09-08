@@ -76,8 +76,9 @@ Accepter « tous les chapitres », « tout open banking », un numéro, un nom. 
 
 ## Étape 3 — Production
 
-1. **Lecture.** Ouvrir uniquement la cible retenue. Au-delà de 20 Ko par fichier, déléguer :
-   un sous-agent par fichier, contrat d'extraction seule (cf. `_ROUTAGE.md` §5).
+1. **Lecture.** Ouvrir uniquement la cible retenue. Déléguer selon la Règle n°7 de `CLAUDE.md` :
+   la question est étroite (un domaine par fichier), donc délégation ; environ 50 Ko de source
+   par agent, un agent peut porter plusieurs fichiers, extrait rendu fichier par fichier.
    La synthèse porte sur ce qui existe déjà dans le vault, **jamais sur les PDF** :
    re-synthétiser un maillon, pas re-décliner le texte. Pour décliner le texte, c'est `/exigence`.
 

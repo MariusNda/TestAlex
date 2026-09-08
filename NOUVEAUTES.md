@@ -155,3 +155,102 @@ pas un maillon de la chaîne. Références retirées de `_ROUTAGE.md` et de `_LI
 ont été observés, dont le refus de combler un trou de sourcing quand la source correspondante
 avait été écartée. Ces passes ont aussi révélé que le delta DSP2 → DSP3 n'est pas calculable en
 l'état : huit des neuf textes de ligne de base ne sont pas déposés dans le vault.*
+
+---
+
+## 11 · `_ROUTAGE.md` réduit à une table de pointeurs
+
+**Problème.** Le fichier avait dérivé : il portait des règles (« lire exactement, dans cet ordre »,
+« ne pas ouvrir », le contrat de délégation, la sélection des sources) alors qu'il ne devait être
+qu'un index. Deux fichiers donnaient donc des ordres, et ils se contredisaient.
+
+Cas réel : sur une demande de delta DSP2 → DSP3, la section 1 nommait les fichiers à ouvrir,
+tandis que la section 6 exigeait de lister les sources et d'attendre. Sur trois passes du même
+prompt, deux ont listé, une a produit directement — en citant la section 1 pour se justifier.
+La règle n'était pas ignorée : elle était ambiguë.
+
+**Correction.** `_ROUTAGE.md` est désormais une table « tu as besoin de… → fichier », sans ordre
+ni interdiction, avec les fichiers de plus de 20 Ko marqués `⧗`. Tout ce qui prescrit est remonté
+dans `CLAUDE.md` : **Règle n°6 — sélection des sources** (non négociable) et **Règle n°7 —
+délégation**. Les méthodes détaillées sont descendues dans `_methodes/`. `CLAUDE.md` reste la
+seule autorité, à 198 lignes pour une cible de 200.
+
+## 12 · Cinq contradictions internes de `CLAUDE.md` corrigées
+
+**Problème.** Le fichier se contredisait lui-même sur cinq points, dont trois qui rendaient une
+règle inapplicable.
+
+**Correction.**
+
+| # | Contradiction | Correction |
+|---|---|---|
+| 1 | Les Règles n°1 et n°3 imposaient de passer par **PageIndex**, hors service depuis le 2026-07-17 | la lecture directe du PDF devient la voie normale, PageIndex l'option |
+| 2 | `/loi` était annoncé « PageIndex » seul | aligné sur la Règle n°1 |
+| 3 | Un **niveau 0** était attribué à l'€N wholesale alors que le tableau n'en définissait que trois | niveau 0 défini dans le tableau |
+| 4 | Le CRA était déclaré « archivé » puis « niveau 1 » deux paragraphes plus loin | « niveau 1 atteint, dossier clos » |
+| 5 | « Dupliquer la structure de `cyber-resilience-act/` » pour une nouvelle réglementation — or ce dossier n'a pas de `_LISEZMOI.md` | renvoi à `_methodes/anatomie-vault.md`, `_LISEZMOI.md` inclus |
+
+Restait un renvoi mort (« le tableau d'état ci-dessous », qui n'existait pas), une mention de
+`.claude/agents/` qui n'existe pas dans ce vault, et un décompte de « 7 commandes » alors qu'il y
+en a 8. Corrigés.
+
+Une sixième contradiction n'a **pas** été corrigée parce qu'elle relève d'une décision de mission :
+AMLR est déclaré niveau 2 avec un dossier vide. Elle est documentée en `CHANGE.md` A.10.
+
+---
+
+## 13 · Règle n°7 — délégation reformulée sur un critère décidable
+
+**Problème.** La règle disait : déléguer au-delà de 20 Ko **pour moins de 10 % d'extrait utile**.
+Or la taille de l'extrait ne se connaît qu'**après** avoir lu. Au moment de décider, le critère
+était indécidable. En pratique le modèle estimait depuis la description du fichier dans
+`sources.md` — il raisonnait juste, mais pas parce que la règle le lui disait.
+
+Second défaut : « un sous-agent par fichier » était arbitraire. Sur `exigences/`, ça donnait
+22 agents, donc 22 rechargements de `CLAUDE.md` — environ 55 000 tokens d'amorçage pour 270 Ko
+de source. Le temps n'était pas le problème (les 22 tournaient en parallèle et finissaient en
+20 secondes), le coût si.
+
+**Correction.** Deux critères, tous deux connus avant d'ouvrir le moindre fichier.
+
+*Quand déléguer* — sur la **largeur de la question**, pas sur la taille du résultat :
+
+| Question | Décision |
+|---|---|
+| étroite (un identifiant, un article, une entité, un domaine) | déléguer |
+| large (elle couvre tout le document) | lecture directe |
+| plusieurs fichiers, une question étroite dans chacun | déléguer |
+
+*Combien d'agents* — au **budget : ~50 Ko de source par agent**, jamais plus que le nombre de
+fichiers. Un agent peut porter plusieurs fichiers ; un fichier n'est jamais coupé entre deux
+agents, et chaque agent rend son extrait fichier par fichier avec un `[SRC:]` distinct, sans quoi
+l'attribution est perdue et la Règle n°1 tombe.
+
+Vérifié contre les quatre passes déjà tournées : `exigences/` en entier passe de 22 agents à **6**,
+le delta sur 7 sources à **4**, l'étude CAPS lue de bout en bout reste à **0**. Les comportements
+observés deviennent prévisibles, et la décision se prend avant la première lecture.
+
+Au passage, les deux blocs d'identifiants Notion sont descendus dans `_transverse/notion.md` :
+c'est de la configuration, pas de la règle. `CLAUDE.md` revient à **192 lignes**.
+
+*Note sur la nouveauté n°13 : la Règle n°7 a été réécrite une seconde fois, non plus comme un jeu
+de seuils mais comme le **raisonnement** à conduire — ce que la délégation apporte, ce qu'elle
+coûte, et les deux choses qui doivent rester bornées (ce que l'agent lit, ce qu'il rend). Les
+ordres de grandeur (50 Ko, 8 fichiers) y figurent comme repères, pas comme règles. Le cas « beaucoup
+de petits fichiers » bascule vers un balayage en deux passes. Seul le contrat de retour reste
+non négociable.*
+
+---
+
+## 14 · Langue de travail
+
+**Problème.** Aucun fichier du harnais ne disait en quelle langue travailler. Vérifié sur
+l'ensemble du vault : ni `CLAUDE.md`, ni `redaction-gt`, ni les commandes. Conséquence observée
+en session réelle : deux commentaires intermédiaires sortis en anglais au milieu d'une analyse
+française (« *This confirms Art. 49 matches ET-04's description precisely* »).
+
+**Correction.** Une section « Langue de travail » en tête de `_skills/redaction-gt/SKILL.md`, et
+un rappel dans la Règle n°4 : **français sans exception**, y compris les commentaires intermédiaires
+d'un raisonnement, pas seulement les livrables. Les termes réglementaires anglais consacrés
+(*verification of payee*, *open banking*, *spoofing*, *dynamic linking*) se gardent tels quels,
+en italique, sans traduction forcée.

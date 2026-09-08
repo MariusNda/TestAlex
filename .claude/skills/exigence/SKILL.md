@@ -5,7 +5,7 @@ description: Décliner un article ou domaine du texte réglementaire en exigence
 Portion du texte à décliner : $ARGUMENTS
 
 0. Lis la ligne « Réglementation active » de CLAUDE.md : elle donne le préfixe d'IDs et le dossier cible.
-1. Localise la portion via PageIndex si le texte y est indexé. Sinon (crédits épuisés, cf. MODE-EMPLOI §4),
+1. Localise la portion via PageIndex si le texte y est indexé. Sinon (crédits épuisés depuis le 2026-07-17, cf. Règle n°1 de CLAUDE.md),
    lecture directe du PDF déposé dans le dossier de la réglementation. Jamais de mémoire, jamais
    d'article inventé. Cite chaque passage [SRC: texte §article].
 2. Propose les exigences au format du référentiel : ID (<PRÉFIXE>-EX-NNN séquentiel, préfixe de la

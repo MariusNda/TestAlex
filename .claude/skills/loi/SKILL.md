@@ -6,7 +6,7 @@ Question juridique : $ARGUMENTS
 
 1. Identifie le(s) texte(s) concerné(s) dans le registre sources.md de la réglementation.
 2. Interroge PageIndex pour localiser les sections pertinentes (navigation par l'arbre, pas de supposition).
-   Si le texte n'y est pas indexé (crédits épuisés, cf. MODE-EMPLOI §4), lis directement le PDF déposé dans
+   Si le texte n'y est pas indexé (crédits épuisés depuis le 2026-07-17, cf. Règle n°1 de CLAUDE.md), lis directement le PDF déposé dans
    le dossier de la réglementation et cite [SRC: <doc> §Art. X].
 3. Cite chaque passage au format [SRC: document version §section]. Si tu ne peux pas localiser la section exacte : dis-le, ne l'invente JAMAIS.
 4. Croise avec hypotheses.md : la réponse confirme, infirme ou crée-t-elle une hypothèse ? Propose la mise à jour (sans l'écrire avant validation).
