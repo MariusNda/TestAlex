@@ -45,7 +45,13 @@ cite ses faits et hypothèses, un fait cite sa source.
 
 **Quand un maillon change**, chercher son identifiant dans tout le dossier et signaler nommément
 chaque élément qui le cite. Le champ `Dépendances` d'une hypothèse est un point de départ, pas la
-réponse complète.
+réponse complète. `/lint` fait cette recherche systématiquement.
+
+**Format de chaque maillon** — motif d'identifiant, emplacement, champs obligatoires, valeurs
+autorisées : `_methodes/ontologie.md`. **À lire avant toute écriture dans un fichier de contenu**,
+jamais de format écrit de mémoire. Le vocabulaire employé par les règles et les commandes est
+fixé dans `_methodes/glossaire-vault.md` ; en particulier `REG-` n'est pas un préfixe mais une
+notation de substitution, à remplacer par le préfixe réel de la réglementation.
 
 ---
 
@@ -168,6 +174,7 @@ Dimensionnement détaillé et cas réels : `_methodes/delegation.md`.
 | `/mail [CR]` | transformer un CR en email prêt à envoyer (draft seul) |
 | `/veille [reg]` | veille réglementaire, delta contre la baseline du vault (Règle n°3) |
 | `/debrief [texte]` | vidage de contexte → routage classé et sourcé dans le vault |
+| `/lint [reg]` | contrôle de cohérence : identifiants, dépendances, énumérations, sources (lecture seule) |
 
 ## Routines
 
@@ -178,13 +185,16 @@ réglementation active.
 son enrichissement si un interlocuteur y manque.
 
 **Fin de session** — résumer ce qui a été appris ou modifié, et lister les `[SRC: à sourcer ⚠️]`
-encore ouverts.
+encore ouverts. Après une passe d'écriture qui touche plusieurs maillons (`/exigence`, `/debrief`,
+`/reunion`), proposer `/lint` : c'est lui qui voit ce que la session a cassé en amont ou en aval.
 
 **Toute écriture** — diff présenté et validé par l'utilisateur avant application. Aucune exception.
 
 ## Où trouver quoi
 
-Un fichier, par besoin : `_ROUTAGE.md`. Pourquoi ces règles existent, avec les incidents qui les
-ont motivées : `_methodes/pourquoi-ces-regles.md`. Structure : `_methodes/anatomie-vault.md`.
+Un fichier, par besoin : `_ROUTAGE.md`. Vocabulaire du harnais : `_methodes/glossaire-vault.md`.
+Format des objets du vault : `_methodes/ontologie.md`. Pourquoi ces règles existent, avec les
+incidents qui les ont motivées : `_methodes/pourquoi-ces-regles.md`.
+Structure : `_methodes/anatomie-vault.md`.
 Notion : `_transverse/notion.md`. État de la mission et niveaux : `_transverse/etat-mission.md`.
 Incohérences à trancher : `CHANGE.md`. Changements du harnais : `NOUVEAUTES.md`.

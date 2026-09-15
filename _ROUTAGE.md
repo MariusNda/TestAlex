@@ -12,6 +12,8 @@
 
 | Tu as besoin de… | Fichier |
 |---|---|
+| le sens exact d'un terme du harnais (préfixe, maillon, brique, baseline…) | `_methodes/glossaire-vault.md` |
+| le format d'un objet du vault (identifiant, champs, statuts autorisés) | `_methodes/ontologie.md` |
 | la méthode du GT (3 phases, arbres de décision) | `_skills/analyse-reglementaire/SKILL.md` |
 | le blueprint des arbres | `_skills/analyse-reglementaire/arbres-blueprint.md` |
 | le style de rédaction d'un livrable | `_skills/redaction-gt/SKILL.md` |

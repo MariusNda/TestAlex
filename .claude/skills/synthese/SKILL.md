@@ -16,18 +16,20 @@ le chemin complet. Le nom du fichier suffit, et c'est la seule chose utile pour 
 
 ## Étape 1 — Quelle réglementation
 
-Si $ARGUMENTS n'en nomme pas une, poser exactement ceci, puis **attendre** :
+Si $ARGUMENTS n'en nomme pas une : **lire la table des réglementations en tête de `CLAUDE.md`**
+— c'est le registre unique, ne jamais recopier une liste ici — et la restituer telle quelle, en
+marquant l'active. Puis **attendre**.
 
 ```
 Quelle réglementation ?
 
-  dsp3 (active)
-  euro-numerique
-  euro-numerique-wholesale
-  amlr · nis2 · cyber-resilience-act  (dossiers encore vides)
+  <un dossier par ligne, dans l'ordre de la table de CLAUDE.md,
+   avec son niveau de traitement ; « (active) » sur la réglementation active>
 ```
 
-Ne rien lire avant la réponse. Si la réponse est un dossier vide, le dire et s'arrêter :
+Ne rien lire d'autre avant la réponse. Un dossier peut être au gabarit (fichiers créés, contenu
+non peuplé) quel que soit son niveau déclaré : le constater en ouvrant son `_LISEZMOI.md`, pas en
+le supposant depuis cette liste. Si le dossier retenu est effectivement vide, le dire et s'arrêter :
 ne pas synthétiser un gabarit, ne pas le combler avec une connaissance générale du texte.
 
 ## Étape 2 — Quelle cible

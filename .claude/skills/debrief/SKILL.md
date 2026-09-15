@@ -7,16 +7,23 @@ Vidage à traiter : $ARGUMENTS (si vide : demander à Alex de dicter ou coller s
 Objectif : transformer un monologue brut en écritures propres et sourcées dans le vault, sans jamais
 trahir la Règle n°1. Le vidage mélange forcément du sûr et du supposé : ton travail est de démêler.
 
+0. FORMATS : lis `_methodes/ontologie.md` avant d'écrire quoi que ce soit. Elle donne, par type
+   d'objet, le motif d'identifiant, l'emplacement, les champs obligatoires et les valeurs autorisées.
+   Ne jamais écrire un identifiant de mémoire.
+
 1. RÉGLEMENTATION CIBLE : lis la ligne « Réglementation active » de CLAUDE.md. Tout est routé vers le
    dossier de cette réglementation (sauf si Alex nomme explicitement une autre réglementation).
+   Le préfixe d'identifiants est celui de cette réglementation (`DSP3-`, `AMLR-`…) : `REG-` est une
+   notation de substitution, jamais une valeur à écrire.
 
 2. DÉCOUPAGE + CLASSIFICATION : segmente le vidage en éléments discrets. Pour chacun, qualifie :
-   - FAIT (vérifiable / attribué à une source) -> faits.md, format Fn.m.
-   - HYPOTHÈSE (supposition, zone floue, à confirmer) -> hypotheses.md, statut 🟡 OUVERTE, ID REG-Hnn,
-     avec dépendances pressenties.
+   - FAIT (vérifiable / attribué à une source) -> faits.md, format F<X>.<Y>.
+   - HYPOTHÈSE (supposition, zone floue, à confirmer) -> hypotheses.md, statut 🟡 OUVERTE,
+     ID <PRÉFIXE>-HNN, avec dépendances pressenties **nommées par identifiant**.
    - OPINION / position (« telle entité estime », « le GT penche pour ») -> à attribuer explicitement,
      jamais présentée comme un fait.
-   - EXIGENCE naissante -> exigences.md (REG-EX-NNN, statut « déclinée »). Si elle prétend citer le
+   - EXIGENCE naissante -> le fichier de domaine de `exigences/` si le référentiel est éclaté,
+     sinon `exigences.md` (<PRÉFIXE>-EX-NNN, statut « déclinée »). Si elle prétend citer le
      texte, NE PAS inventer l'article : marquer « à localiser via /loi ».
    - DÉCISION / conclusion -> conclusions.md (graduée : Écarté / Acquis / À acter / À étudier / Hors périmètre).
    - ACTION (quelque chose à faire) -> base Notion « Actions GT » (Réglementation = active, Statut = À faire,

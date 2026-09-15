@@ -11,5 +11,7 @@ Prépare mon brief du jour :
    PUIS second passage de sécurité : Porteur = Alex, Statut ≠ Fait, toutes réglementations — filet au cas
    où une action porterait un autre tag que l'actif ou Transverse.
 2. VAULT : hypothèses 🟡 OUVERTES sans progrès, [SRC: à sourcer ⚠️], prochains jalons (journal.md).
+   La réglementation active et la liste des dossiers se lisent dans la table en tête de CLAUDE.md,
+   jamais depuis une liste recopiée ailleurs.
 3. SYNTHÈSE : ordre de bataille en 3 à 5 points max, style de `_skills/redaction-gt/SKILL.md` (lire le fichier). Lecture seule
    (exception : rien, aucune écriture).
