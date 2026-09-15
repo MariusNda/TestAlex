@@ -56,10 +56,11 @@ son identifiant est à signaler nommément** (Règle n°2 et chaîne de traçabi
 | **Identifiant** | `<PRÉFIXE>-EX-NNN`, séquentiel sur toute la réglementation (pas par domaine) |
 | **Emplacement** | `reglementations/<reg>/exigences/NN-<domaine>.md`, une ligne de tableau. Index et prochain ID libre : `exigences/_index.md` |
 | **Champs** | `ID` · `Exigence` (une phrase, verbe d'obligation) · `Source` (`[SRC:]`) · `Débiteur` (qui porte l'obligation) · `Délai / seuil` · `Paramètre ouvert` · `Statut` |
-| **Statut** | `déclinée` — seule valeur en usage. ⚠️ Cycle de vie au-delà de la déclinaison non déclaré à ce jour : à arbitrer avant d'introduire une autre valeur. |
+| **Statut** | `déclinée` → `cinématisée` → `cartographiée` → `évaluée` (atelier) → `conclue`. Cycle déclaré dans l'en-tête des référentiels. ⚠️ Les 711 exigences DSP3 sont toutes en `déclinée` : aucune commande ne fait avancer un statut à ce jour. |
 | **Amont** | Source (article du texte) |
 | **Aval** | Cinématique, Brique, Hypothèse (paramètre ouvert), Conclusion |
 | **Règle** | Le référentiel est **éclaté** en `exigences/` sur DSP3. Un dossier sans éclatement porte un `exigences.md` unique. Vérifier lequel existe avant d'écrire. |
+| **⚠️ Divergence** | Les gabarits encore vides (AMLR, NIS2, CRA) portent 8 colonnes — `Domaine fonctionnel · Rôles concernés · Briques · Hypothèses liées` — là où DSP3 en porte 7 : `Débiteur · Délai/seuil · Paramètre ouvert`. **Deux formats pour le même objet.** Le format DSP3 est retenu ici parce qu'il est le seul éprouvé sur un texte entier ; à arbitrer avant la première passe sur AMLR ou NIS2. |
 
 ### Cinématique
 
