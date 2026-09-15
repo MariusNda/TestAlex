@@ -51,6 +51,7 @@
 | l'état consolidé des corrections d'un support | `gt-seances/<reg>/revue-*-registre-consolide.md` ⧗ |
 | les correctifs les plus récents sur un support | `gt-seances/<reg>/propositions-*-correctifs-*.md` |
 | le support de séance | le `.pptx` de `gt-seances/<reg>/` |
+| le registre des constats de revue d'un support | `gt-seances/<reg>/revue-*-registre-consolide.md` ⧗ |
 | le texte de l'oral | `gt-seances/<reg>/*-voiceover-*.md` ⧗ |
 
 ## Transverse

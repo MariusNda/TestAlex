@@ -175,6 +175,7 @@ Dimensionnement détaillé et cas réels : `_methodes/delegation.md`.
 | `/veille [reg]` | veille réglementaire, delta contre la baseline du vault (Règle n°3) |
 | `/debrief [texte]` | vidage de contexte → routage classé et sourcé dans le vault |
 | `/lint [reg]` | contrôle de cohérence : identifiants, dépendances, énumérations, sources (lecture seule) |
+| `/revue-support [pptx]` | relire un support de séance contre le vault : rattachement des affirmations + registre précédent (lecture seule) |
 
 ## Routines
 
