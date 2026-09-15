@@ -67,7 +67,7 @@ Chacun contient le PDF du texte officiel — 431 pages pour le PSR — plus ce q
 Commence toujours par le `_LISEZMOI.md` du dossier : il dit où on en est.
 
 ### `exigences/`, le cœur du travail
-
+x
 Un texte de loi de 431 pages n'est pas exploitable tel quel. On le découpe donc en
 **exigences** : une obligation = une ligne, avec qui la porte, sous quel délai, et surtout
 l'article exact d'où elle vient. Sur DSP3 il y en a 711, rangées dans 22 fichiers thématiques

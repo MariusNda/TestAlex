@@ -10,12 +10,43 @@ Lis la ligne « Réglementation active » de `CLAUDE.md` — elle donne le préf
 dossier cible. Puis `_methodes/ontologie.md` § Exigence — colonnes du référentiel et valeurs de statut.
 **Le format du référentiel fait foi, jamais ta mémoire du format.**
 
-Choisis le mode, et dis lequel tu prends :
+### Si $ARGUMENTS nomme déjà la réglementation et le périmètre
 
-| $ARGUMENTS | Mode | Délégation |
+Pars directement. `/exigence dsp3 Art. 50` ne pose aucune question.
+
+### Sinon, deux questions, dans cet ordre, en attendant la réponse à chaque fois
+
+**1. Quelle réglementation ?** Afficher la table de `CLAUDE.md` telle quelle — c'est le registre
+unique, ne jamais recopier une liste ici — en marquant l'active. **Attendre.**
+
+```
+Quelle réglementation ?
+
+  <un dossier par ligne, avec son niveau de traitement ; « (active) » sur l'active>
+```
+
+**2. Quel périmètre ?** Une fois la réglementation connue, ouvrir son `_LISEZMOI.md` et son
+référentiel pour dire **où on en est** — c'est ce qui rend la question utile — puis proposer :
+
+```
+<REG> — <N> exigences déjà déclinées, Art. <X> à <Y> couverts.
+        <ou : référentiel vide, gabarit seul.>
+
+Quel périmètre ?
+
+  tout le texte          passe complète, <N> agents  (≈ <N> × 50 Ko)
+  un domaine             <liste des domaines existants, s'il y en a>
+  un ou plusieurs articles
+```
+
+**Attendre.** Ne rien lire d'autre avant la réponse.
+
+### Le mode découle du périmètre
+
+| Périmètre choisi | Mode | Délégation |
 |---|---|---|
-| un article, une poignée d'articles, un domaine | **portion** | non — lecture directe (Règle n°7, cas 1) |
-| le texte entier, « tout », rien | **passe complète** | oui — §2 |
+| un article, quelques articles, un domaine | **portion** | non — lecture directe (Règle n°7, cas 1) |
+| tout le texte | **passe complète** | oui — §2 |
 
 Une portion ne lance jamais de sous-agents : le texte à lire est petit, déléguer coûterait plus
 que de lire. En mode portion, saute au §3.
