@@ -6,9 +6,11 @@ Réglementation à surveiller : $ARGUMENTS (si vide : lire la ligne « Réglemen
 
 Objectif : détecter ce qui a CHANGÉ depuis la dernière veille, pas répéter ce qu'on sait déjà. Applique la Règle n°3.
 
-1. BASELINE (ce qu'on sait déjà) : lis, dans le dossier de la réglementation, `sources.md` (version de référence
-   en cours + section « Attendus ») et `journal.md` (dernière entrée [REG]/veille et sa date). C'est le point de
-   comparaison : tu cherches les nouveautés POSTÉRIEURES à cette date.
+1. BASELINE DE VEILLE (ce qu'on sait déjà) : lis, dans le dossier de la réglementation, `sources.md`
+   (version de référence en cours + section « Attendus ») et `journal.md` (dernière entrée [REG]/veille
+   et sa date). C'est le point de comparaison : tu cherches les nouveautés POSTÉRIEURES à cette date.
+   ⚠️ À ne pas confondre avec le dossier `ligne-de-base/`, qui contient des textes antérieurs déposés
+   et ne sert pas ici (cf. `_methodes/glossaire-vault.md`).
 
 2. RECHERCHE (sources officielles d'abord) :
    - Statut & calendrier législatif : EUR-Lex, registres du Conseil et du Parlement (Legislative Observatory / Legislative Train), Journal officiel de l'UE.

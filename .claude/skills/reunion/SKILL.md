@@ -16,6 +16,8 @@ Réunion à traiter : $ARGUMENTS (si vide : le plus récent enregistrement non t
 3. Rédige le CR en appliquant `_skills/redaction-gt/SKILL.md` (**lire le fichier** ;
    ce n'est pas un skill invocable).
 4. PRÉSENTE le CR + le diff vault + la liste des actions extraites (porteur, échéance) AVANT toute écriture.
+   Le diff vault respecte les formats de `_methodes/ontologie.md` (motifs d'identifiants, champs,
+   énumérations) : la lire avant de proposer une écriture dans faits / hypotheses / conclusions.
 5. Après validation :
    - Page Notion CR : sous-page de la page de la réglementation active, sous « 🖊️ Comptes rendus ».
      DSP3/PSR → page « 📋 DSP3 », page_id 3bf852cc7e1580158d26cb6170da092f (consigne Alex 2026-08-17).
